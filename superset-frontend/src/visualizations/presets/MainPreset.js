@@ -79,6 +79,8 @@ import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { PopKPIPlugin } from '@superset-ui/plugin-chart-period-over-period-kpi';
 import TimeTableChartPlugin from '../TimeTable';
 
+import { SupersetPluginChartOrchardDevdemo } from '@superset-ui/plugin-chart-orchard-devdemo';
+
 export default class MainPreset extends Preset {
   constructor() {
     const experimentalPlugins = isFeatureEnabled(
@@ -162,6 +164,7 @@ export default class MainPreset extends Preset {
         new EchartsSunburstChartPlugin().configure({ key: 'sunburst_v2' }),
         new HandlebarsChartPlugin().configure({ key: 'handlebars' }),
         new EchartsBubbleChartPlugin().configure({ key: 'bubble_v2' }),
+        new SupersetPluginChartOrchardDevdemo().configure({ key: 'ext-orchard-devdemo' }),
         ...experimentalPlugins,
       ],
     });

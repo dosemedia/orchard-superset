@@ -203,3 +203,53 @@ Understanding the Superset Points of View
 
 <!-- telemetry/analytics pixel: -->
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=bc1c90cd-bc04-4e11-8c7b-289fb2839492" />
+
+### Orchard Dev Setup
+
+https://superset.apache.org/docs/installation/installing-superset-from-scratch
+
+- create venv
+- source venv
+
+pip install apache-superset
+
+pip install psycopg2-binary
+
+pip install Pillow
+
+export SUPERSET_CONFIG_PATH=./superset_config_dev.py
+
+superset db upgrade
+
+export FLASK_APP=superset
+superset fab create-admin  
+
+- for dev admin account, used : orchard, orchard
+
+superset init
+
+-----
+
+Daily dev:
+
+superset run -p 8088 --with-threads --reload --debugger
+
+-----
+
+For custom chart dev, had to install older version of yo:
+
+npm install -g yo@"4.x"
+
+Note, originally created superset-frontend/plugins/plugin-chart-orchard-devdemo in external folder, but moved into project directly:
+
+To run dev stack for plugin (start superset with "superset run" command above first):
+
+1) terminal A
+cd superset-frontend/plugins/plugin-chart-orchard-devdemo/
+npm run dev
+
+2) terminal B
+cd superset-frontend
+npm install
+npm run dev-server
+(runs on port 9000 but doesn't say so)
