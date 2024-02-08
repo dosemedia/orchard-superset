@@ -99,6 +99,21 @@ services:
     healthcheck:
       disable: true
 
+  nginx: 
+    image: jc21/nginx-proxy-manager:latest 
+    ports: 
+      - "80:80" 
+      - "81:81" 
+      - "443:443" 
+    volumes: 
+      - ./data:/data 
+      - ./letsencrypt:/etc/letsencrypt 
+    depends_on: 
+      - superset 
+    links: 
+      - superset:redash 
+    restart: always 
+
 volumes:
   superset_home:
     external: false
