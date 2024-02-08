@@ -232,7 +232,10 @@ superset init
 
 Daily dev:
 
+export SUPERSET_CONFIG_PATH=./superset_config_dev.py
 superset run -p 8088 --with-threads --reload --debugger
+
+Note, custom plugin won't work with "superset" cmd, have to use dev ui below:
 
 -----
 
@@ -253,3 +256,16 @@ cd superset-frontend
 npm install
 npm run dev-server
 (runs on port 9000 but doesn't say so)
+
+## Test Prod Build with Dev DB
+
+docker build -t orchard-superset .
+docker compose -f docker-compose-non-dev.yml up
+
+## Prod Build
+
+docker build -t orchard-superset .
+docker compose -f docker-compose-prod.yml up
+
+TODO - how to deploy?
+just docker compose down/up?

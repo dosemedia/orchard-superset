@@ -37,8 +37,9 @@ export type SupersetPluginChartOrchardDevdemoQueryFormData = QueryFormData &
   SupersetPluginChartOrchardDevdemoStylesProps &
   SupersetPluginChartOrchardDevdemoCustomizeProps;
 
-export type SupersetPluginChartOrchardDevdemoProps = SupersetPluginChartOrchardDevdemoStylesProps &
-  SupersetPluginChartOrchardDevdemoCustomizeProps & {
-    data: TimeseriesDataRecord[];
-    // add typing here for the props you pass in from transformProps.ts!
-  };
+export type SupersetPluginChartOrchardDevdemoProps =
+  SupersetPluginChartOrchardDevdemoStylesProps &
+    SupersetPluginChartOrchardDevdemoCustomizeProps & {
+      data: TimeseriesDataRecord[];
+      // add typing here for the props you pass in from transformProps.ts!
+    };
