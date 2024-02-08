@@ -267,5 +267,65 @@ docker compose -f docker-compose-non-dev.yml up
 docker build -t orchard-superset .
 docker compose -f docker-compose-prod.yml up
 
-TODO - how to deploy?
-just docker compose down/up?
+## Deploy
+
+Note : Keep an eye on disk usage on superset server and cleanup docker images frequently.
+
+
+### On developer machine
+
+1) Login to docker
+
+```
+cat dose-data-warehouse-73662b6e1ee5.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+```
+
+2) Build the container image
+
+```
+docker build -t orchard-superset .
+```
+
+3) Tag and push the image (update v1 with new tag number)
+
+```
+docker tag orchard-superset:latest us-central1-docker.pkg.dev/dose-data-warehouse/orchard-superset/orchard-superset:v1
+docker push us-central1-docker.pkg.dev/dose-data-warehouse/orchard-superset/orchard-superset:v1
+```
+
+4) Update the docker-compose-prod.yml file with new image (line 22)
+
+5) Commit and push changes to GitHub master branch.
+
+### On the superset machine
+
+1) Connect to superset server (you may need to add your ssh key in the vm's connection settings - make sure to use "hosting" user)
+
+```
+ssh hosting@superset.orchard-insights.com
+```
+
+2) Open superset folder and stop current running services
+
+```
+cd orchard-superset
+docker compose -f docker-compose-prod.yml down
+```
+
+3) Pull new copy of repo (we are deploying with a container registry, but repo has latest docker compose files so it is needed to)
+
+```
+git pull origin master
+```
+
+4) Docker login (this should be done already as "hosting" user)
+
+```
+cat dose-data-warehouse-73662b6e1ee5.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+```
+
+5) Restart services
+
+```
+docker compose -f docker-compose-prod.yml up
+```

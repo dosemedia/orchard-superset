@@ -19,7 +19,7 @@
 
 # docker build -t orchard-superset .
 
-x-superset-image: &superset-image orchard-superset:latest
+x-superset-image: &superset-image us-central1-docker.pkg.dev/dose-data-warehouse/orchard-superset/orchard-superset:v1
 x-superset-depends-on: &superset-depends-on
 #  - db
   - redis

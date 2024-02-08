@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dose-data-warehouse",
+  "private_key_id": "73662b6e1ee5f456fe17c4ccd556d225f44f6113",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7qXqYBzMkB9fF\noiiOsMcoYZLG6lbRClTnGdLcBpadf8FcqjzCpuV7vOZCOuAaMqfDE++oH0ENhvZ7\nwb7nMuIxvPjIRR73jZQ1BTeR2zNBqU7l6wJFCEYfaU60mPggP6djecXeD3nUw1xN\nnPOYtE1Om5OzepwjIklFwRJy5WXVIfsi7QfdkYarhNjyVsDh/K3U0blW1vr/+7m4\nCwwczPZlRqwGCWaPJ43cwYbtSnMzImvudASNU7XH67XtB8U24m3hHqjhQAZ2+WT8\nLtF5JXxns5fQk727cswH5V9K5Soarexp6msIMCr5e3qp8ahL0+5Zojj9fQIgVCAM\nzao1i4WvAgMBAAECggEASxb4EoADAx5OROrrXpk2v543XHelMHT5XxWSrW7HcpMN\nnJYTxPGCLr55xjOHu4PcY+8EvNlwrsh7tS5jxGA0aSGLzJr31qdkj8icITU8L8Be\n7RnZqSSz5lq9Xv88fa7qvB+cQIwhvDRFqVqtkENJEbSn56+ebWKJPiuQxb+rvRlx\nGkglHqveyGcDC7Bf8ytXO+9Y+vyTSQacg0HUd0TBFSiOiDM2hZpxhdv3myKbXx1W\nKPok/hkkPyY9QvslU+fo/89r3qgnajnRRBMrQiqfpb6wtA42T5gs/L7wP4r75/iU\nb8jhhfS2q/NVGk4Fr7z4yuQKs8TdCCwGnSq2N4H7CQKBgQDwc1F8fCA7WIvxIeEA\ncB5lZWi3edBcWdF8avrwv49E8o8fqk6hW/T9IPHTXvhSz0Lc0IS902o9rZqU9ZP2\ny7rCgni05GhwQdA5aUTlE+diyZ6+j2ng2HvPeaKAuF0EXQ+g2lhFBFbUcIgUOOqF\n54Br5xxfibLM6HYsklJWvk591wKBgQDHzD4hbZE92Xz29Vyr05cfQCGBLeBLoApK\nyzFKm4vbH7tTC+4/0gKJ76ieXbKqS1B4pWW6Bo8Shh3Vf1u1ybbr4F1fvNI3gWCQ\n6+0tBekd4ofr6GQ2iPtEOJarI+YmA7TaCX+E5pMY9UNDtgVw0HTBKorpBSEgvdkm\ncLihDwtL6QKBgQCpuIw09Rx/J0IoI0TBXWJnKcxfbZFADnoKeyzDkEMdZKTXsgus\nY88qeP2Yt/lJ4lgMqvZ3UuozvP1W1Xzqf+VEdHmlHXAGhL3oOEDT/Vee6DevxGT0\nu3mw+edVOk0VzmZAoL4bgTOU4hV7SK1pdP21rDzfxr85WYBId8O8zLl0owKBgBT3\nJKnjUnNYCBnuA0xwhpIb66gfhULKR2ozyjdW/SUAPmrnfJer1OJeiKYdlOrzvjz6\ntiMAHzFFa4oEtD3uLciwoXuzV6fFZrmuWBP6Y8zkAXlKyIFEfIFbIsxQlwz0JJ0g\nlAYBH/xleCp5xjZhWW8PpMXw6NoDse6rs2QLLRdJAoGAdx59OQ3Y9ORT4KneNPcn\nPbpROHRVaFPK0kluMGZEEeYpnOsYg9vh6/H2P+p66KzETKUWaNf9aAeM8jYDeFGr\nobK0wPQglT6bFvrr1oLNFNxpizpK3iGUua3ngQFNzCh0QqmGqNkbBsD1+94iSVE8\n7EnC0p4uYfiQAOlACroKFRU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "artifact-registry-docker@dose-data-warehouse.iam.gserviceaccount.com",
+  "client_id": "117214713866333632765",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/artifact-registry-docker%40dose-data-warehouse.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
