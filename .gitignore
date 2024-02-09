@@ -113,3 +113,4 @@ docker/requirements-local.txt
 cache/
 data/
 letsencrypt/
+dose-data-warehouse-d3263ba8a9c6.json
