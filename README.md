@@ -277,7 +277,7 @@ Note : Keep an eye on disk usage on superset server and cleanup docker images fr
 1) Login to docker
 
 ```
-cat dose-data-warehouse-73662b6e1ee5.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+cat dose-data-warehouse-d3263ba8a9c6.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
 ```
 
 2) Build the container image
@@ -298,6 +298,8 @@ docker push us-central1-docker.pkg.dev/dose-data-warehouse/orchard-superset/orch
 5) Commit and push changes to GitHub master branch.
 
 ### On the superset machine
+
+Note : docker/.env-prod file must exist, service account file (dose-data-warehouse-d3263ba8a9c6.json) must also exist in project root (a backup can be found in sharepoint).
 
 1) Connect to superset server (you may need to add your ssh key in the vm's connection settings - make sure to use "hosting" user)
 
@@ -321,7 +323,7 @@ git pull origin master
 4) Docker login (this should be done already as "hosting" user)
 
 ```
-cat dose-data-warehouse-73662b6e1ee5.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+cat dose-data-warehouse-d3263ba8a9c6.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
 ```
 
 5) Restart services
