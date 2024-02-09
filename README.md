@@ -327,5 +327,5 @@ cat dose-data-warehouse-73662b6e1ee5.json | docker login -u _json_key --password
 5) Restart services
 
 ```
-docker compose -f docker-compose-prod.yml up
+docker compose -f docker-compose-prod.yml up -d
 ```

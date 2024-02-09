@@ -111,7 +111,7 @@ services:
     depends_on: 
       - superset 
     links: 
-      - superset:redash 
+      - server:superset
     restart: always 
 
 volumes:
